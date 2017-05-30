@@ -1,0 +1,442 @@
+@import "bourbon"
+@import "vars"
+@import "setings"
+@import "_mixin"
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px)
+    .topline
+      .wrapp
+        justify-content: center
+
+        .logo
+          margin-right: 40px
+    .section-1
+      .wrapp
+        .phone
+          margin-left: 70px
+@media only screen and (max-width: 1100px)
+
+    .section-7
+      .wrapp
+        .content-immage
+          display: none
+        .button-wrapp
+          padding-bottom: 30px
+
+@media only screen and (max-width : 992px)
+    .topline
+      .wrapp
+        nav
+          .menu
+            a
+              font-size: em(14)
+    .section-1
+      .wrapp
+        .container
+          .content
+            .innovation
+              font-size: em(12)
+            h1
+              font-size: em(30)
+    .section-3
+      .item
+        &:before
+          right: -15px
+          top: 61px
+        .circle
+          +size(130px)
+    .section-6
+      min-height: 650px
+      .wrapp
+        .slider
+          .slick-arrow
+            &:before
+              display: none
+          .slide
+            .text
+              flex-basis: 600px
+              p
+                font-size: em(14)
+
+    footer
+      .wrapp
+        justify-content: flex-start
+        .myForm
+          margin-left: 4px
+          margin-right: 30px
+        nav
+          margin-right: 40px
+
+@media only screen and (max-width : 850px)
+  footer
+    .wrapp
+      flex-flow: column wrap
+      justify-content: center
+      align-items: center
+      nav
+        padding-top: 40px
+        ul
+          .contacts
+            padding-bottom: 36px
+      .pay-system
+        width: 300px
+        p
+          text-align: center
+        .platforms
+          a
+            display: inline-block
+            padding: 0
+            padding-right: 12px
+            &:last-child
+              padding-right: 0
+        .social
+          padding-top: 40px
+          text-align: center
+@media only screen and (max-width : 768px)
+    .topline
+      .wrapp
+        justify-content: space-between
+        .toggle-mnu
+          display: block
+        .logo
+          margin: 0 auto
+        nav
+          .menu
+            margin-left: 85px
+            .lc
+              display: none
+    .section-1
+      .wrapp
+        padding: 0 10px
+        .container
+          flex-flow: column!important
+          max-height: none
+          .phone
+            order: 1
+          .content
+            padding-top: 50px
+            padding-bottom: 30px
+            order: 0
+            .innovation, h1
+              text-align: center
+            .innovation
+              display: inline-block
+          .button-wrapp
+            margin-top: 80px
+            text-align: center
+            order: 2
+            .period
+              padding-left: 0
+              padding-bottom: 30px
+              text-align: center
+
+    .section-3
+      .section-content
+        min-height: 280px
+        .items
+          justify-content: space-around
+          .item
+            flex-basis: 140px
+            .circle
+                +size(120px)
+    .section-6
+      min-height: 600px
+      .wrapp
+        .slider
+          .slide
+            .text
+              flex-basis: 400px
+    .section-9
+      .wrapp
+        form
+          input
+            display: block
+            margin-right: 0
+            width: 100%
+            line-height: 40px
+          .button
+            margin-top: 32px
+    footer
+      .wrapp
+        flex-flow: column wrap
+
+@media only screen and (max-width : 480px)
+    .topline
+      .wrapp
+        .logo
+          margin: 0 auto
+        nav
+          .menu
+            display: none
+          .hidden-menu
+            display: block
+            line-height: 20px
+            vertical-align: middle
+            li
+              a
+                padding: 0
+                margin-right: 20px
+    .section-1
+      .wrapp
+        padding: 0 10px
+        .container
+          flex-flow: column!important
+          .phone
+            display: block
+            margin: 0 auto
+            order: 1
+          .content
+            order: 0
+            border: 1px solid transparent
+          .button-wrapp
+            display: block
+            padding-top: 30px
+            width: 280px
+            margin: 0 auto
+            order: 2
+            .button
+              line-height: 22px
+    .section-2
+      .hidden-block
+        display: none
+    .section-3
+      .item
+        flex-basis: 120px
+        margin-bottom: 30px
+        &:before
+          left: 144px
+          top: 60px
+        &:nth-child(3)
+          &:before
+            display: none
+        p
+          font-size: em(13)
+          line-height: 13px
+    .section-6
+      min-height: 650px
+      .wrapp
+        .slider
+          .slide
+            .text
+              flex-basis: 300px
+            span
+              text-align: left
+              padding-top: 20px
+    .section-7
+      .section-head
+        h2
+          font-size: em(28)
+
+@media only screen and (max-width: 320px)
+    .topline
+      .wrapp
+        .logo
+          margin: 0 auto
+    .section-1
+      .wrapp
+        padding: 0 10px
+        .container
+          flex-flow: column!important
+          .phone
+            margin: 0
+            order: 1
+          .content
+            max-height: 300px
+            padding-top: 33px
+            order: 0
+            .innovation
+              text-align: center
+              font-size: em(14)
+              padding-bottom: 50px
+            h1
+              font-size: em(30)
+              text-align: center
+
+          .button-wrapp
+            margin: 0
+            order: 2
+            padding-top: 40px
+            .button
+              line-height: 22px
+            .period
+              padding-left: 0
+              padding-top: 15px
+              padding-bottom: 30px
+              text-align: center
+              font-size: em(12)
+
+    .section-2
+      .s2-bg, .wrapp
+        display: none
+
+    .hidden-block
+      display: block
+
+    .section-3
+      p
+        font-size: em(13)
+        line-height: 14px
+      .item
+        margin-bottom: 45px
+        flex-basis: 140px
+        &:before
+          right: -18px
+          top: 41px
+        &:nth-child(3)
+          order: 1
+          &:before
+            display: block
+            transform: rotate(-180deg)
+            left: -13px
+            top: 40px
+        &:nth-child(2)
+          &:before
+            transform: rotate(90deg)
+            left: 66px
+            top: 170px
+        .circle
+          +size(92px)
+
+    .section-6
+      min-height: 594px
+      .wrapp
+        padding-bottom: 80px
+        .section-head
+          h2
+            font-size: em(30)
+        .slider
+          max-width: 280px
+          .slick-arrow
+            &:before
+              display: none
+          .slide
+            display: flex
+            flex-flow: row wrap
+            justify-content: flex-start
+
+            .image-wrapp
+              order: 1
+              margin-left: 21px
+            .text
+              padding-left: 22px
+              padding-right: 22px
+              padding-bottom: 25px
+              order: 3
+              p
+                font-size: em(14)
+            span
+              display: block
+              align-self: center
+              margin-left: 0
+              padding-top: 0
+              padding-bottom: 0
+              margin-top: 30px
+              width: 130px
+              font-size: em(12)
+              order: 2
+
+
+
+    .section-7
+      .wrapp
+        .section-head
+          padding-top: 48px
+          padding-bottom: 46px
+          h2
+            display: none
+          span, p
+            display: block
+            color: $font-color
+            text-transform: uppercase
+            font-family: "GothamPro", sans-serif
+          span
+            padding-bottom: 30px
+            font-size: em(30)
+          p
+            font-size: em(14)
+        .section-content
+          .cause
+            &:after
+              left: 83px
+          .button-wrapp
+            padding-top: 44px
+            .button
+              width: 280px
+    .section-8
+      .wrapp
+        .section-head
+          padding-top: 56px
+          padding-bottom: 40px
+          h2
+            font-size: em(30)
+        .accordion
+          padding-bottom: 30px
+          .accordianheader
+            h3
+              height: 60px
+              padding-top: 20px
+              line-height: 18px
+              font-size: em(16)
+              text-align: left
+              i
+                bottom: 30px
+              .fa
+                font-size: em(20)
+
+    .section-9
+      .wrapp
+        .section-head
+
+          h2
+            padding-bottom: 36px
+            font-size: em(30)
+          p
+            padding-right: 40px
+            padding-left: 40px
+            font-size: em(16)
+        form
+          padding-bottom: 58px
+        .download-block
+          a
+            padding: 0
+            margin-right: 10px
+            &:last-child
+              margin-right: 0
+    footer
+      .wrapp
+        .myForm
+          margin-right: 0
+          margin-left: 0
+          width: 280px
+          text-align: center
+        nav
+          padding-top: 38px
+          margin-right: 0
+          ul
+            .contacts
+              padding-bottom: 36px
+        .pay-system
+          padding-top: 43px
+          p
+            padding-left: 35px
+          .platforms
+            padding-left: 35px
+            a
+              display: inline-block
+              padding-bottom: 0
+              width: 102px
+              padding-right: 12px
+              &:last-child
+                padding-right: 0
+            img
+              width: 102px
+          .social
+            padding-top: 43px
+            text-align: center
+
+
+

@@ -1,0 +1,43 @@
+@import "bourbon"
+@import "vars"
+
+%wrapp
+  width: 1180px
+  margin: 0 auto
+  padding: 0 10px
+  position: relative
+  text-align: center
+  font-family: "GilroyLight", sans-serif
+  z-index: 0
+  &::after
+    content: ''
+    width: 0
+    height: 0
+    visibility: hidden
+    display: block
+    position: relative
+    font-size: 0px
+    line-height: 0px
+
+%flex
+  display: flex
+  flex-wrap: wrap
+
+
+%buttons
+  display: inline-block
+  text-align: center
+  color: #fff
+  font-family: "GilroyLight", sans-serif
+  font-size: em(14px)
+  background-color: $button-color
+  border: none
+  outline: none
+  cursor: pointer
+  text-decoration: none
+  &:hover
+    background-color: $button-hover
+  &:active
+    background-color: $button-active
+  button::-moz-focus-inner
+    border: 0 !important

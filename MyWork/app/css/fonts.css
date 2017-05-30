@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "GothamPro";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/GothamPro/GothamPro.eot?#iefix") format("embedded-opentype"), url("fonts/GothamPro/GothamPro.woff") format("woff"), url("fonts/GothamPro/GothamPro.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "GothamProLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/GothamProLight/GothamProLight.eot?#iefix") format("embedded-opentype"), url("fonts/GothamProLight/GothamProLight.woff") format("woff"), url("fonts/GothamProLight/GothamProLight.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "MullerThin";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/MullerThin/MullerThin.eot?#iefix") format("embedded-opentype"), url("fonts/MullerThin/MullerThin.woff") format("woff"), url("fonts/MullerThin/MullerThin.ttf") format("truetype"); }

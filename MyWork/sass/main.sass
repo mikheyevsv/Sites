@@ -1,0 +1,933 @@
+@import "bourbon"
+@import "_vars"
+@import "_mixin"
+@import "setings"
+@import "../app/sprites/sprite"
+@import "../app/libs/Magnific-Popup/dist/magnific-popup.sass"
+@import "../app/libs/slick/slick/slick.sass"
+@import "../app/libs/slick/slick/slick-theme.sass"
+@import "../app/libs/jquery-ui/jquery-ui.sass"
+@import "../app/libs/animate/animate.sass"
+.homesect
+  position: relative
+  margin: 0 auto
+
+  .section-head
+    padding: 40px 0 60px 0
+    text-align: center
+    margin: 0 auto
+    h2
+      text-align: center
+      text-transform: uppercase
+      color: $font-color
+      opacity: 0.9
+      font-family: "GothamProLight", sans-serif
+      font-size: em(36)
+
+    p
+      padding-top: em(18)
+      text-align: center
+      color: $font-color
+      opacity: .5
+      font-family: "GothamPro", sans-serif
+      font-size: em(16)
+      line-height: 22px
+
+  .section-content
+    p
+      color: #a8adb4
+      font-family: "GothamProLight", sans-serif
+      font-size: em(14)
+      line-height: 22px
+
+.topline
+  border-bottom: 10px solid #f6f5f5
+  .wrapp
+    @extend %wrapp, %flex
+    justify-content: space-between
+    align-items: center
+    min-height: 50px
+    .toggle-mnu
+      display: none
+      align-self: center
+      +size(50px)
+      outline: none
+      border: none
+      background-color: #20364e
+
+    .toggle-mnu span:after,
+    .toggle-mnu span:before
+      content: ""
+      position: absolute
+      left: 0
+      top: 9px
+
+    .toggle-mnu span:after
+      top: 18px
+
+    .toggle-mnu span
+      position: relative
+      top: 15px
+      left: 13px
+      display: block
+
+    .toggle-mnu span,
+    .toggle-mnu span:after,
+    .toggle-mnu span:before
+      width: 24px
+      height: 2px
+      background-color: #fff
+      transition: all 0.3s
+      backface-visibility: hidden
+      border-radius: 2px
+
+    .toggle-mnu.on span
+      background-color: transparent
+
+    .toggle-mnu.on span:before
+      transform: rotate(45deg) translate(-1px, 0px)
+
+    .toggle-mnu.on span:after
+      transform: rotate(-45deg) translate(6px, -7px)
+
+    .toggle-mnu.on + #menu
+      opacity: 1
+      visibility: visible
+
+    .logo
+    nav
+      .hidden-menu
+        display: none
+      li
+        display: inline-block
+        a
+          margin: 0 15px
+          position: relative
+          padding: 0 0 0 20px
+          text-decoration: none
+          color: #20364e
+          font-size: +em(18)
+          &:before
+            position: absolute
+            top: 0
+            left: 0
+            content: ''
+          &:last-child
+            margin-right: 0
+        .doc
+          &:before
+            +sprite($document)
+        .info
+          &:before
+            +sprite($info)
+
+  //*********** Section-1***********
+.section-1
+  min-height: 708px
+  background-size: cover
+  background-position: top
+  position: relative
+  &:before
+    @extend %before
+    background-color: #edf3fc
+    opacity: .4
+  .wrapp
+    @extend %wrapp
+    padding-top: 57px
+    .container
+      max-height: 570px
+      display: flex
+      flex-flow: column wrap
+      .phone
+        margin-right: 65px
+      .content
+        padding-top: 81px
+        .innovation
+          max-width: 307px
+          line-height: 17px
+          text-align: left
+          font-size: em(14)
+          color: $font-color
+          padding-bottom: 34px
+        h1
+          text-align: left
+          font-size: rem(40)
+          font-family: "GothamProLight", sans-serif
+          color: $font-color
+          span
+            color: $main-color
+      .button-wrapp
+        margin-top: 180px
+        text-align: left
+        .button
+          @extend %buttons
+          padding:
+                  left: 45px
+                  right: 45px
+          line-height: 40px
+          vertical-align: middle
+          border-radius: 5px
+        .period
+          padding-top: 20px
+          padding-left: 90px
+          color: $text-color
+          font-size: em(11px)
+
+
+//*********SECTION-2*****
+.section-2
+  min-height: 640px
+  background: url(../img/section-2/bg-2.jpg) no-repeat center top
+  position: relative
+  .left-human, .right-human
+    position: absolute
+  .left-human
+    background: url(../img/section-2/left.jpg) no-repeat
+    +size(242px 641px)
+    top: 0
+    left: 0
+  .right-human
+    background: url(../img/section-2/11.png) no-repeat
+    opacity: .5
+    +size(242px 641px)
+    top: 0
+    right: 0
+  .wrapp
+    @extend %wrapp
+    .section-head
+      padding-bottom: 18px
+.section-content
+  background: url(../img/section-2/phone.jpg) no-repeat center top
+  min-height: 335px
+  &:before
+    position: absolute
+    content: "○"
+    color: $main-color
+    bottom: 89px
+    margin-left: -5px
+  .content-top
+    @extend %flex
+    justify-content: space-between
+    .item
+      max-width: 260px
+      position: relative
+      font-family: "GothamPro", sans-serif
+      &:before
+        position: absolute
+        content: "○"
+        color: $main-color
+        top: -25px
+        padding-left: 5px
+
+      h4
+        color: #20364e
+        font-size: em(16)
+        font-weight: 400
+        padding-bottom: 25px
+        padding-top: 15px
+      p
+        text-align: center
+        opacity: .5
+        color: #20364e
+        font-size: em(14)
+        line-height: 14px
+      &:nth-child(1)
+        margin-left: 94px
+      &:nth-child(2)
+        margin-right: 89px
+  .content-bottom
+    @extend .content-top
+    margin: 0 auto
+    margin-top: 100px
+    .item
+      &:nth-child(1)
+        margin-left: 182px
+      &:nth-child(2)
+        margin-right: 182px
+  .button-wrapp
+    padding-top: 38px
+    .button
+      @extend %buttons
+      width: 280px
+      line-height: 40px
+      vertical-align: middle
+.hidden-block
+  display: none
+  .wrapp
+    max-width: 320px
+    margin: 0 auto
+    .section-head
+      padding-bottom: 40px
+      padding-top: 0
+    .section-content
+      display: flex
+      flex-flow: column wrap
+      background: none
+      .item
+        position: relative
+        width: 100%
+        min-height: 80px
+        background-color: #20364e
+        border-bottom: 1px solid white
+        &:before
+          position: absolute
+          content: ""
+          width: 10px
+          height: 10px
+          border-radius: 100%
+          background-color: #fff
+          bottom: -5px
+          right: 48%
+          z-index: 20
+        img
+          display: block
+          margin: 16px auto 0
+        p
+          padding-top: 15px
+          text-align: center
+          color: #fff
+          font-family: "GothamPro", sans-serif
+          font-size: em(16)
+        .arrow
+          &:hover
+            opacity: 1
+          position: absolute
+          right: 7%
+          top: 40px
+          content: ""
+          background-image: url(../img/section-2/arrow.png)
+          +size(15px 6px)
+          cursor: pointer
+          opacity: .2
+        .active-arrow
+          transform: rotate(180deg)
+          +trans(.2s)
+      .button-wrapp
+        position: relative
+        margin: 0 auto
+        padding: 24px 0
+        &:before
+          position: absolute
+          content: ""
+          width: 10px
+          height: 10px
+          border-radius: 100%
+          background-color: #fff
+          bottom: -5px
+          right: 48%
+          z-index: 20
+      .inf
+        display: none
+        background-color: #364a5f
+        margin-top: 14px
+        p
+          padding: 22px 0
+          text-align: center
+          opacity: .5
+          color: #fff
+          font-family: "GothamPro", sans-serif
+          font-size: em(14)
+          line-height: 14px
+      .last
+        position: relative
+        &:before
+          position: absolute
+          content: ""
+          width: 0
+          height: 0
+
+//********SECTION-3
+.section-3
+  padding-bottom: 50px
+  background: url(../img/section-3/section-3-bg.jpg) no-repeat center/cover
+  .wrapp
+    @extend %wrapp
+    .section-content
+      background: none
+      &:before
+        content: ""
+.items
+  @extend %flex
+  justify-content: space-between
+  max-width: 1005px
+  margin: 0 auto
+  .item
+    position: relative
+    flex-basis: 220px
+    &:before
+      position: absolute
+      content: ""
+      background: url(../img/section-3/arrow.png) no-repeat
+      +size(10px 19px)
+      right: -24px
+      top: 76px
+    &:last-child
+      position: relative
+      &:before
+        display: none
+    .circle
+      @extend %flex
+      align-content: center
+      justify-content: center
+      margin: auto
+      +size(165px)
+      border-radius: 100%
+      border: 2px solid white
+    p
+      padding-top: 27px
+      color: $font-color
+      font-family: "GothamPro", sans-serif
+      font-size: +em(16)
+      line-height: 22px
+.section-bottom
+  position: relative
+  margin: 0 auto
+  max-width: 585px
+  p
+    padding-bottom: 30px
+    color: $font-color
+    font-family: "GothamPro", sans-serif
+    font-size: em(18)
+    line-height: 24px
+    letter-spacing: .05em
+  a
+    color: $font-color
+    font-family: "GothamPro", sans-serif
+    font-size: em(14)
+    line-height: 22px
+    text-transform: uppercase
+  .button-wrapp
+    padding-bottom: 23px
+  .button
+    @extend %buttons
+    position: relative
+    width: 225px
+    line-height: 40px
+    vertical-align: middle
+    text-align: left
+    padding-left: 55px
+    &:after
+      position: absolute
+      content: ""
+      background: url(../img/section-3/arrow-button.png) no-repeat
+      +size(22px)
+      top: 9px
+      right: 60px
+
+//******SECTION-4*********
+.section-4
+  padding-bottom: 53px
+  .wrapp
+    @extend %wrapp
+    .section-content
+      @extend %flex
+      justify-content: center
+      min-height: 422px
+      background: none
+      &:before
+        content: ""
+      h3
+        position: relative
+        padding-bottom: 30px
+        color: $font-color
+        font-family: "GothamPro", sans-serif
+        font-size: em(24)
+        text-transform: uppercase
+        text-align: right
+        &:after
+          position: absolute
+          content: ""
+          top: 6px
+          +size(84px 11px)
+          z-index: 40
+      p
+        padding-bottom:  20px
+
+      .left-side, .right-side, .image-wrapp
+        position: relative
+        max-width: 370px
+      .left-side, .right-side
+        margin-top: 65px
+        p
+          text-align: left
+
+      .image-wrapp
+        order: 2
+        p
+          text-transform: uppercase
+          font-size: em(22)
+      .right-side
+        position: relative
+        margin-left: 70px
+        order: 3
+        h3
+          text-align: left
+          position: relative
+          &:after
+            background: url(../img/section-4/s4-pointer.png) no-repeat
+            transform: rotate(-180deg)
+            left: -94px
+            z-index: 40
+      .left-side
+        margin-right: 70px
+        #rotate
+          &:after
+            transform: rotate(-22deg)
+            top: -8px
+            right: -88px
+        h3
+          position: relative
+          &:after
+            right: -90px
+            background: url(../img/section-4/s4-pointer.png) no-repeat
+
+        p
+          position: relative
+          &:before
+            position: absolute
+            content: ""
+            background: url(../img/section-4/s4-arrow.png) no-repeat
+            +size(11px 7px)
+            left: -15px
+            top: 7px
+
+.s-bottom
+  @extend %flex
+  justify-content: center
+  max-width: none
+  h3
+
+    color: $font-color
+    font-family: "GothamPro", sans-serif
+    font-size: em(24)
+    text-transform: uppercase
+    text-align: right
+  p
+    display: inline-block
+    padding-bottom: 0
+    color: #a8adb4
+    font-family: "GothamProLight", sans-serif
+    font-size: em(14)
+    line-height: 22px
+  span
+    display: block
+    align-self: center
+    width: 160px
+    height: 45px
+    opacity: .5
+    color: #20364e
+    font-family: "GothamPro", sans-serif
+    font-size: em(14)
+    line-height: 22px
+    text-transform: uppercase
+  .advantages
+    flex-basis: 445px
+    background-color: white
+    box-shadow: 0 0 25px rgba(35, 31, 32, 0.1)
+  .left, .right
+    padding-top: 30px
+    h3
+      padding-bottom: 23px
+      line-height: 26px
+    p
+      padding-bottom: 35px
+  .left
+    margin-right: 60px
+    text-align: right
+    h3, p
+      padding-right: 30px
+      text-align: right
+
+  .right
+    margin-left: 60px
+    text-align: left
+    h3, p
+      text-align: left
+      padding-left: 30px
+
+//******* SECTION-5*********
+.section-5
+  background-color: #f0f2f8
+  .wrapp
+    @extend %wrapp
+    h4
+      padding-top: 53px
+      padding-bottom: 61px
+      color: $font-color
+      font-family: "GothamPro", sans-serif
+      font-size: em(18)
+      text-transform: uppercase
+    form
+      @extend %form
+    p
+      padding-bottom: 55px
+      opacity: .5
+      color: $font-color
+      font-family: "GothamPro", sans-serif
+      font-size: em(18)
+      text-transform: uppercase
+
+//****** SECTION-6*******
+.section-6
+  background-color: #e4e9f0
+  min-height: 546px
+  .wrapp
+    @extend %wrapp
+    .slider
+      margin: 0 auto
+      max-width: 945px
+      background-color: #fff
+      .slick-next, .slick-prev
+        &:before
+          position: absolute
+          top: 0
+          content: ""
+          +size(11px 29px)
+      .slick-next
+        &:before
+          background: url(../img/section-6/arrow-next.png) no-repeat
+      .slick-prev
+        left: -36px
+        &:before
+          background: url(../img/section-6/arrow-next.png) no-repeat
+          transform: rotate(-180deg)
+      .slick-dots
+        bottom: -45px
+        li
+          margin: 0
+          width: 20px
+          line-height: 20px
+          vertical-align: middle
+          button
+            &:before
+              position: absolute
+              top: 25%
+              left: 25%
+              width: 7px
+              height: 7px
+              content: ''
+              border-radius: 100%
+              opacity: 1
+              border: 1px solid $font-color
+        .slick-active
+          button
+            &:before
+              background-color: $font-color
+
+      .slide
+        @extend %flex
+        justify-content: flex-start
+        .image-wrapp
+          padding-top: 43px
+          margin-right: 43px
+          margin-left: 45px
+        .text
+          max-width: 745px
+          text-align: left
+          p
+            padding-top: 43px
+            color: $font-color
+            font-family: "GothamPro", sans-serif
+            font-size: em(16px)
+            line-height: 22px
+            &:nth-child(2)
+              padding-top: 0
+              font-family: "GothamProLight", sans-serif
+        span
+          padding-top: 112px
+          padding-bottom: 36px
+          margin-left: 150px
+          color: $font-color
+
+//*****SECTION-7******
+.section-7
+  .wrapp
+    @extend %wrapp
+    .section-head
+      span, p
+        display: none
+    .section-content
+      position: relative
+      min-height: 702px
+      background: none
+      &:before
+        content: ""
+      .button-wrapp
+        padding-top: 61px
+        .button
+          position: relative
+          width: 363px
+          z-index: 150
+      .content-immage
+        position: absolute
+        background-color: transparent
+        top: 220px
+        left: 137px
+        z-index: 140
+
+.causes
+  @extend %flex
+  justify-content: center
+  .cause
+    position: relative
+    padding-top: 50px
+    padding-left: 33px
+    padding-right: 30px
+    margin: 22px 9px
+    background-color: #fff
+    +size(322px 236px)
+    box-shadow: 2.5px 4.3px 16px rgba(35, 31, 32, 0.1)
+    text-align: left
+    box-sizing: border-box
+    overflow: hidden
+    z-index: 150
+    &:after
+      position: absolute
+      bottom: -75px
+      left: 109px
+      opacity: .1
+      color: $font-color
+      font-size: 158px
+      font-weight: 100
+      text-transform: uppercase
+    h4
+      padding-bottom: 16px
+      color: $font-color
+      font-family: "GothamPro", sans-serif
+      font-size: em(14)
+      text-transform: uppercase
+    //&:nth-child(3), &:nth-child(6)
+    //  margin-right: 0
+    //&:nth-child(1), &:nth-child(2),&:nth-child(3)
+    //  margin-top: 0
+    //&:nth-child(4), &:nth-child(5),&:nth-child(6)
+    //  margin-bottom: 0
+    &:nth-child(1)
+      z-index: 100
+      &:after
+        content: "01"
+        left: 153px
+    &:nth-child(2)
+      z-index: 100
+      &:after
+        content: "02"
+    &:nth-child(3)
+      &:after
+        content: "03"
+    &:nth-child(4)
+      &:after
+        content: "04"
+    &:nth-child(5)
+      &:after
+        content: "05"
+    &:nth-child(6)
+      &:after
+        content: "06"
+
+//***********SECTION-8****************
+.section-8
+  background-color: #d8e0ea
+  .wrapp
+    @extend %wrapp
+    .accordion
+      max-width: 945px
+      margin: 0 auto
+      padding-bottom: 60px
+      text-align: left
+      .accordianheader
+        border-bottom: 1px solid #fff
+        &:last-child
+          border-bottom: none
+      .ui-accordion-content
+        padding: 0 0 24px 24px
+        background-color: transparent
+        color: #4c6a8b
+      .ui-accordion-header
+        position: relative
+        padding: 0
+        line-height: 65px
+        outline: none
+        border: none
+        color: $font-color
+        background-color: transparent
+        font-family: "GothamPro", sans-serif
+        font-size: em(18)
+        i
+          position: absolute
+          right: 0
+          bottom: 11px
+          color: #fff
+          +trans(.4s)
+        .ui-accordion-header-icon
+          display: none
+      .ui-state-active
+        i
+          color: $main-color
+          transform: rotate(180deg)
+
+//*******SECTION-9***********
+.section-9
+  .wrapp
+    @extend %wrapp
+    .section-head
+      p
+        opacity: 1
+    form
+      @extend %form
+      padding-bottom: 80px
+      input
+        background-color: transparent
+.download-block
+  padding-bottom: 57px
+  p
+    padding-bottom: 35px
+    opacity: .5
+    color: $font-color
+    font-family: "GothamProLight", sans-serif
+    font-size: em(18)
+    line-height: 22px
+    text-transform: uppercase
+  a
+    padding-right: 30px
+    outline: none
+    white-space: nowrap
+    &:last-child
+      padding-right: 0
+
+//****FOOTER*****
+footer
+  background-color: #f6f7fb
+  .wrapp
+    @extend %wrapp, %flex
+    justify-content: center
+    padding-bottom: 50px
+    nav
+      padding-top: 71px
+      margin-right: 138px
+      text-align: left
+      ul
+        li
+          line-height: 25px
+          a
+            position: relative
+            color: $font-color
+            text-decoration: none
+            font-family: "GothamPro", sans-serif
+            font-size: em(14)
+            +trans(.2s)
+            &:hover
+              color: #6e7d8c
+              text-decoration: underline
+          .doc, .info, .lc
+            position: relative
+            margin-left: 20px
+            &:before
+              position: absolute
+              top: 0
+              left: -20px
+              content: ''
+          .doc
+            &:before
+              background-image: url(../img/sprite/document.png)
+              +size(14px 20px)
+          .info
+            &:before
+              background-image: url(../img/sprite/info.png)
+              +size(16px)
+        .contacts
+          padding-bottom: 80px
+.myForm
+  margin-top: 52px
+  margin-right: 48px
+  +size(322px 378px)
+  background-color: white
+  box-shadow: 2.5px 4.3px 16px rgba(35, 31, 32, 0.1)
+  text-align: center
+  h2
+    padding-top: 31px
+    padding-bottom: 20px
+    color: $font-color
+    font-family: "GothamPro", sans-serif
+    font-size: em(18)
+    text-transform: uppercase
+  p
+    padding-bottom: 22px
+    opacity: .5
+    color: $font-color
+    font-family: "GothamProLight", sans-serif
+    font-size: em(14)
+    line-height: 16px
+    &:last-child
+      padding-bottom: 0
+  label
+    display: block
+    text-align: left
+    margin: 0 auto
+    margin-bottom: 30px
+    padding-bottom: 5px
+    width: 232px
+    border-bottom: 1px solid $font-color
+    span
+      display: inline-block
+      font-family: GothamPro
+      font-size: em(12)
+      color: $font-color
+    input
+      background-color: transparent
+      border: none
+      outline: none
+
+  input[type=submit]
+    background-color: $main-color
+    +size(230px 40px)
+    border-radius: 5px
+    color: #fff
+    border: none
+    cursor: pointer
+
+.pay-system
+  padding-top: 71px
+  text-align: left
+  p
+    color: $font-color
+    font-family: "GothamPro", sans-serif
+    font-size: em(18)
+    line-height: 22px
+    text-transform: uppercase
+  .platforms
+    padding-top: 18px
+    a
+      display: block
+      width: 136px
+      padding-bottom: 31px
+      &:last-child
+        padding-bottom: 0
+  .social
+    padding-top: 83px
+    .fa
+      color: #949497
+      margin: 5px
+      &:hover
+        color: $main-color
+    span
+      display: block
+      padding-top: 28px
+      opacity: .3
+      color: $font-color
+      font-family: "GothamPro", sans-serif
+      font-size: em(12)
+
+.hidden
+  display: none
+#callback
+  position: relative
+  margin: auto
+  input::-moz-focus-inner
+    border: 0 !important
+  .mfp-close
+    position: absolute
+    top: -9px
+    right: -9px
+    color: $font-color
+//ALWAYS END
+@import "media"

@@ -1,0 +1,1388 @@
+@import "bourbon"
+@import "_vars"
+@import "setings"
+@import "mixins"
+@import "../libs/jquery-ui/jquery-ui"
+@import "../libs/Magnific-Popup/magnific-popup"
+
+.topLine
+  position: fixed
+  z-index: 100
+  height: 90px
+  width: 100%
+  background-color: $headerColor
+
+  .wrapp
+    @extend %wrapp, %flex
+    justify-content: space-between
+    align-items: center
+
+    .logo
+      opacity: 1
+      margin-top: 17px
+      img
+        width: 100%
+
+    .toggle-mnu
+      align-self: center
+      position: absolute
+      top: 50%
+      left: 45%
+      width: 25px
+      height: 25px
+      outline: none
+      border: none
+
+    .toggle-mnu span:after,
+    .toggle-mnu span:before
+      content: ""
+      position: absolute
+      left: 0
+      top: 9px
+
+    .toggle-mnu span:after
+      top: 18px
+
+    .toggle-mnu span
+      position: relative
+      display: block
+
+    .toggle-mnu span,
+    .toggle-mnu span:after,
+    .toggle-mnu span:before
+      width: 100%
+      height: 2px
+      background-color: #fff
+      transition: all 0.3s
+      backface-visibility: hidden
+      border-radius: 2px
+
+    .toggle-mnu.on span
+      background-color: transparent
+
+    .toggle-mnu.on span:before
+      transform: rotate(45deg) translate(-1px, 0px)
+
+    .toggle-mnu.on span:after
+      transform: rotate(-45deg) translate(6px, -7px)
+
+    .toggle-mnu.on + #menu
+      opacity: 1
+      visibility: visible
+
+    .phoneWrapp
+      position: relative
+      left: 268px
+      width: 330px
+      margin-top: 15px
+
+      .phone
+        padding-right: 35px
+        color: #80a6c4
+        font-family: "GilroyLight", sans-serif
+        font-size: em(18px)
+
+      .buttons
+        @extend %buttons
+        width: 154px
+        line-height: 40px
+        vertical-align: middle
+        border-radius: 20px
+        border: none
+        box-shadow: 0 10px 30px #000
+
+  .topMnu
+    display: none
+    height: 80px
+    background-color: #1b2426
+    position: relative
+    box-shadow: 0 10px 30px black
+
+    .wrapp
+      ul
+        @extend %flex, %wrapp
+        justify-content: space-between
+        align-items: center
+        li
+          line-height: 80px
+
+          a
+            color: #fff
+            text-decoration: none
+            font-family: "GilroyLight", sans-serif
+            font-size: em(16px)
+            transition: all .5s ease
+            &:hover
+              color: $active-link
+              text-decoration: underline
+.mainHeader
+  position: relative
+  width: 100%
+  height: 740px
+  background: url(../img/bg-1.jpg) no-repeat 55%
+
+  .wrapp
+    @extend %wrapp
+
+    .hiddenBlock
+      position: absolute
+      top: 150px
+      width: 818px
+      text-align: left
+
+      h1
+        position: relative
+        display: inline-block
+        color: #fff
+        font-family: "GilroyExtraBold", sans-serif
+        font-size: em(50px)
+        text-transform: uppercase
+        font-weight: 700
+        padding-bottom: 32px
+        letter-spacing: 3px
+
+      span
+
+        color: #80a6c4
+        font-size: em(30px)
+        text-transform: uppercase
+        white-space: pre
+        line-height: 32px
+
+      .heatLoss
+        padding-top: 70px
+        color: #fff
+        font-size: em(18px)
+        line-height: 22px
+        white-space: pre
+
+      .orderWrapp
+        @extend %flex
+        justify-content: space-between
+        align-items: center
+        width: 700px
+        height: 90px
+        padding-top: 26px
+
+        .buttons
+          @extend %buttons
+          font-size: em(16px)
+          width: 370px
+          line-height: 60px
+          vertical-align: middle
+          border-radius: 30px
+          box-shadow: 0 10px 30px #000
+
+        .provider
+          position: relative
+          width: 230px
+          white-space: pre
+          color: #80a6c4
+          font-size: em(14px)
+          &::before
+            content: ""
+            position: absolute
+            background-image: url(../img/medal.png)
+            width: 29px
+            height: 45px
+            top: 15px
+            left: -45px
+
+
+
+.homesect
+  padding-top: 80px
+  position: relative
+  margin: 0 auto
+
+  .section-head
+    text-align: center
+    margin: 0 auto 50px
+
+    h2
+      text-align: center
+      text-transform: uppercase
+      color: #172228
+      font-family: "GilroyExtraBold", sans-serif
+      font-size: em(48px)
+      font-weight: 700
+      letter-spacing: 3px
+    p
+      padding-top: 18px
+      text-align: center
+      text-transform: uppercase
+      color: #172228
+      font-size: em(24px)
+      letter-spacing: 0.05em
+      animation-delay: .5s
+
+//***********SECTION-1************
+
+.section-1
+  border-bottom: 1px solid #e3eaf0
+  .wrapp
+    @extend %wrapp
+
+.works
+  @extend %flex
+  justify-content: space-between
+  margin-bottom: 130px
+
+  .work
+    @extend %flex
+    align-items: center
+    justify-content: center
+    position: relative
+    width: 236px
+    height: 170px
+    text-align: center
+    overflow: hidden
+    &:hover .hiddens
+      transform: translateY(170px)
+
+    .hiddens
+      +trans(.5s)
+      position: absolute
+      left: 0
+      top: -170px
+      width: 100%
+      height: 100%
+      background-color: $section_1-itemColor
+
+      img
+        margin-bottom: 10px
+        margin-top: 10px
+        width: 20%
+      p
+        padding-left: 30px
+        text-align: left
+        color: #172228
+        font-size: em(12px)
+        line-height: 14px
+
+//***********SECTION-2************
+
+.section-2
+  overflow: hidden
+  .wrapp
+    @extend %wrapp
+
+.section-content
+  p
+    text-align: center
+    margin-bottom: 17px
+    color: #507a9b
+    font-size: em(16px)
+    line-height: 22px
+    &:last-child
+      margin-bottom: 0
+
+  .buttons-wrapp
+    @extend %flex
+    justify-content: center
+    margin-bottom: 40px
+    .but-advantage
+      margin-top: 60px
+      +size(449px 60px)
+      margin-right: 20px
+      border: none
+      border-radius: 30px
+      background-color: #e3eaf0
+      color: #172228
+      cursor: pointer
+      font-size: em(16px)
+      line-height: 16px
+      &:hover
+        background-color: #e3eaf0
+        border: 5px solid #7598b4
+      &:active
+        border: 5px solid #7598b4
+        color: #172228
+        background-color: #fff
+        font-family: "GilroyExtraBold", sans-serif
+        font-weight: 800
+        line-height: 16px
+      &:nth-child(2)
+        margin-right: 0
+
+    //********Active Button*******
+    .active-advantage
+      border: 5px solid #7598b4
+      color: #172228
+      background-color: #fff
+      font-family: "GilroyExtraBold", sans-serif
+      font-weight: 800
+
+
+  .buttons
+    @extend %buttons
+    margin-left: 80px
+    margin-top: -46px
+    z-index: 141
+    width: 190px
+    line-height: 50px
+    vertical-align: middle
+    border-radius: 50px
+  .insulation
+    img
+      position: absolute
+      left: 214px
+      top: 326px
+      z-index: 140
+
+  .advantage-2
+    position: relative
+    display: none
+    min-height: 625px
+    z-index: 160
+    .buttons
+      @extend %buttons
+      margin-left: -52px
+      margin-top: 20px
+      width: 190px
+      line-height: 50px
+      border-radius: 28px
+    .work
+      overflow: hidden
+      position: relative
+      width: 416px!important
+      padding-right: 114px
+      float: left
+      //margin-bottom: 40px
+      margin-right: 40px!important
+      &:last-child
+      margin-right: 0
+
+      .number
+        position: relative
+        span
+          position: absolute
+          top: -209px
+        left: 380px
+        .num2
+          position: absolute
+          top: -150px
+  .block-advantage
+    @extend %flex
+    justify-content: space-between
+    position: relative
+    margin-bottom: 95px
+    .combo
+      @extend %flex
+      justify-content: space-between
+      width: 780px
+    .work
+      position: relative
+      z-index: 140
+      margin-top: 40px
+      padding-top: 22px
+      padding-left: 20px
+      padding-bottom: 30px
+      width: 350px
+      font-size: em(16px)
+      background-color: #f2f6f9
+      text-align: left
+      h3
+        color: #172228
+        font-size: em(24px)
+        text-transform: uppercase
+        letter-spacing: 0.05em
+        line-height: 24px
+      p
+        padding-top: 23px
+        opacity: .8
+        color: #172228
+        text-align: left
+        font-size: em(14px)
+        line-height: 18px
+
+      span
+        opacity: .8
+        color: #172228
+        font-family: "GilroyExtraBold", sans-serif
+        font-size: 14px
+        font-weight: 800
+      ul
+        padding-top: 13px
+        li
+          opacity: .8
+          color: #172228
+          font-size: 14px
+          line-height: 18px
+          &:before
+            font-family: "GilroyExtraBold", sans-serif
+            color: #ff9b30
+            content: "•"
+            padding-right: 13px
+            font-weight: 900
+      .number
+        position: relative
+        span
+          position: absolute
+          z-index: 120
+          opacity: .2
+          color: #80a6c4
+          font-size: em(282px)
+          font-weight: 300
+          text-transform: uppercase
+
+    .ser1, .ser2, .ser3, .ser4, .ser5
+      overflow: hidden
+    .ser1
+      height: 417px
+      .number
+        span
+          left: 210px
+          bottom: -150px
+    .ser2
+      height: 242px
+      .number
+        span
+          left: 162px
+          bottom: -117px
+
+    .ser3
+      height: 242px
+      .number
+        span
+          left: 180px
+          bottom: -118px
+    .ser4
+      z-index: 150
+      height: 249px
+      .number
+        span
+          left: 205px
+          bottom: -120px
+
+    .ser5
+      height: 249px
+      .number
+        span
+          left: 174px
+          bottom: -145px
+
+
+//***********SECTION-3************
+
+.section-3
+  background-color: #f2f6f9
+  padding-bottom: 90px
+  .wrapp
+    @extend %wrapp
+    @extend %flex
+    justify-content: space-between
+    .catalog-sidebar
+      width: 340px
+      /*height: 672px;
+      margin-right: 60px
+      //float: left
+      p
+        text-align: center
+        font-size: 16px
+        line-height: 20px
+        color: #172228
+        padding: 20px 0 30px 0
+
+      .but-3
+        background-color: #ff9b30
+        text-align: center
+        color: #fff
+        cursor: pointer
+        margin: 0 auto
+        width: 218px
+        height: 48px
+        line-height: 48px
+        border-radius: 24px
+        margin-bottom: 10px
+        a
+          color: #fff
+          text-decoration: none
+          display: block
+        &:hover
+          background-color: #ff8400
+
+        &:active
+          background-color: #ffc555
+
+      .but-3-1
+        background-color: #7598b4
+        text-align: center
+        color: #fff
+        cursor: pointer
+        margin: 0 auto
+        width: 218px
+        height: 48px
+        line-height: 48px
+        border-radius: 24px
+        margin-bottom: 10px
+        a
+          color: #fff
+          text-decoration: none
+          display: block
+        &:hover
+          background-color: #4f7da2
+        &:active
+          background-color: #93b6d2
+
+      .catalog-menu
+        text-align: left
+        width: 340px
+        min-height: 370px
+        background-color: #fff
+        ul
+          padding: 50px 0 0 20px
+        li
+          list-style: none
+          a
+            font-size: 14px
+            line-height: 30px
+            color: #172228
+            letter-spacing: 0.05em
+            text-decoration: none
+            display: inline-block
+            padding: 0 20px
+            position: relative
+            &:hover
+              color: #7598b4
+
+        .active-link-catalog
+          background-color: #7598b4
+          border-radius: 17px
+          color: #fff !important
+
+        .question-catalog
+          width: 22px
+          height: 22px
+          background: url('../img/quest.png')
+          display: block
+          position: absolute
+          top: 5px
+          right: -10px
+
+        .active-link-catalog .question-catalog
+          display: none
+
+        .hover-quest-catalog
+          padding: 14px 24px
+          background-color: #fff
+          border: 1px solid #7598b4
+          position: absolute
+          top: 50%
+          left: 35px
+          -webkit-transform: translate(0, -50%)
+          transform: translate(0, -50%)
+          display: none
+          color: #7598b4
+          font-size: 12px
+          line-height: normal
+          z-index: 1
+
+        .question-catalog:hover .hover-quest-catalog
+          display: block
+
+        .hover-quest-catalog
+          ul
+            padding: 0
+          li
+            position: relative
+            &:before
+              content: ''
+              width: 3px
+              height: 3px
+              background-color: #7598b4
+              -webkit-border-radius: 100%
+              border-radius: 100%
+              position: absolute
+              top: 5px
+              left: -8px
+          &:before
+            content: ''
+            width: 9px
+            height: 14px
+            background: url('../img/hov-cat.jpg')
+            position: absolute
+            top: 50%
+            left: -8px
+            -webkit-transform: translate(0, -50%)
+            transform: translate(0, -50%)
+
+        .hov-quest-1
+          width: 0px
+
+        .hov-quest-2
+          width: 430px
+
+        .hov-quest-3
+          width: 100px
+
+        .hov-quest-4
+          width: 180px
+
+        .hov-quest-5
+          width: 130px
+
+        .hov-quest-6
+          width: 160px
+
+        .hov-quest-7
+          width: 145px
+
+        .hov-quest-8
+          width: 180px
+
+        .hov-quest-9
+          width: 170px
+
+    .catalog-main
+      @extend %flex
+      justify-content: space-between
+      width: 780px
+      min-height: 681px
+      overflow: hidden
+      .catalog
+        display: none
+      .active
+        display: block
+
+      .product-column
+        float: left
+        margin-right: 9px
+        &:nth-child(3)
+          margin-right: 0
+
+        .product
+          width: 254px
+          min-height: 198px
+          background-color: #fff
+          text-align: center
+          padding-bottom: 20px
+          margin-bottom: 9px
+          position: relative
+          h3
+            font-size: 14px
+            line-height: 18px
+            color: #172228
+            letter-spacing: 0.05em
+            padding-top: 12px
+          span
+            font-family: "GilroyExtraBold", sans-serif
+            font-size: 16px
+            line-height: 18px
+            color: #7598b4
+            letter-spacing: 0.05em
+
+          .text-acces
+            width: 216px
+            background-color: #fff
+            position: absolute
+            top: 99px
+            left: 0
+            z-index: 2
+            padding: 0px 14px 10px 24px
+            font-size: 12px
+            line-height: 16px
+            color: #7598b4
+            letter-spacing: 0.05em
+            font-weight: bold
+
+            .none
+              display: none
+
+          .text-acces
+            li, p
+              padding-bottom: 4px
+              text-align: left
+
+          .text-acces-bottom
+            position: static
+
+          .more, .link-pro
+            outline: none
+            font-size: 12px
+            font-weight: bold
+            display: inline-block
+            text-decoration: none
+            border-bottom: 1px solid #ff9b30
+            color: #ff9b30
+            letter-spacing: 0.05em
+            padding-top: 6px
+            &:hover
+              border-bottom: 1px solid #fff
+
+          .but
+            background-color: #ff9b30
+            text-align: center
+            color: #fff
+            cursor: pointer
+            margin: 0 auto
+            width: 218px
+            height: 48px
+            line-height: 48px
+            border-radius: 24px
+            margin-bottom: 10px
+            a
+              color: #fff
+              text-decoration: none
+              display: block
+            &:hover
+              background-color: #ff8400
+
+            &:active
+              background-color: #ffc555
+
+          .but-4
+            width: 154px
+            height: 40px
+            line-height: 40px
+            -webkit-border-radius: 20px
+            border-radius: 20px
+            margin-top: 8px
+
+
+//***********************SECTION4***********************
+.section-4
+  background: url(../img/bg-4.jpg) center/cover no-repeat
+  min-height: 650px
+
+  .wrapp
+    @extend %wrapp
+    @extend %flex
+    justify-content: center
+    .section-head
+      h2
+        color: #fff
+      p
+        color: #80a6c4
+    .section-content
+      margin-left: 300px
+      p
+        text-align: left
+        margin-bottom: 32px
+      form
+        input
+          display: block
+          +size(296px 48px)
+          border: none
+          outline: none
+          border-radius: 24px
+          text-align: center
+          margin-bottom: 7px
+
+        input[type=submit]
+          background-color: $button-color
+          color: #fff
+          font-size: em(16px)
+          width: 323px
+
+        .clearable
+          background-image: url(../img/close.png)
+          background-position: 95% 50%
+          background-repeat: no-repeat
+          padding-right: 27px
+          cursor: pointer
+
+        input::-moz-placeholder
+          color: #172228
+          font-size: 14px
+          text-align: center
+
+        input::-webkit-input-placeholder
+          color: #172228
+          font-size: 14px
+          text-align: center
+
+// ************SECTION-5**********
+
+.section-5
+  .wrapp
+    @extend %wrapp, %flex
+    justify-content: flex-end
+
+    .section-content
+      width: 810px
+      margin-bottom: 110px
+      .buttons-wrapp
+        @extend %flex
+        justify-content: flex-start
+        margin-bottom: 40px
+
+        .but-indicator
+          margin-top: 60px
+          +size(310px 60px)
+          margin-right: 20px
+          border: none
+          border-radius: 30px
+          background-color: #e3eaf0
+          color: #172228
+          cursor: pointer
+          font-size: em(16px)
+          line-height: 16px
+          &:hover
+            background-color: #e3eaf0
+            border: 5px solid #7598b4
+          &:active
+            border: 5px solid #7598b4
+            color: #172228
+            background-color: #fff
+            font-family: "GilroyExtraBold", sans-serif
+            font-weight: 800
+            line-height: 16px
+          &:nth-child(2)
+            margin-right: 0
+
+        //********Active Button*******
+        .active-indicator
+          border: 5px solid #7598b4
+          color: #172228
+          background-color: #fff
+          font-family: "GilroyExtraBold", sans-serif
+          font-weight: 800
+      .rul
+        position: absolute
+        left: 100px
+        top: 300px
+      .buttons
+        @extend %buttons
+        width: 225px
+        position: relative
+        bottom: -240px
+        left: -630px
+      .indicator
+        position: relative
+        @extend %flex
+        justify-content: space-between
+
+        .index
+          text-align: left
+          margin-bottom: 30px
+          padding-right: 50px
+          p
+            color: #172228
+            font-family: "GilroyExtraBold", sans-serif
+            font-size: em(18px)
+            font-weight: 700
+            text-align: left
+            padding: 8px 0 10px 0
+          span
+            color: #7598b4
+            font-size: em(14px)
+            line-height: 18px
+          &:nth-child(5), &:nth-child(6)
+            margin-bottom: 0
+
+      .ind-2
+        display: none
+        .wrapper
+          @extend %flex
+          justify-content: flex-start
+
+
+
+// ***************SECTION-6***************
+
+.section-6
+  background-color: #f2f6f9
+  padding-bottom: 83px
+  .wrapp
+    @extend %wrapp
+
+    .buttons
+      display: block
+      @extend %buttons
+      margin: 0 auto
+      width: 487px
+      line-height: 50px
+      vertical-align: middle
+      border-radius: 24px
+
+    .section-content
+      @extend %flex
+      position: relative
+      border: 10px solid #fff
+      padding-top: 40px
+      margin-bottom: 45px
+      min-height: 315px
+      .name
+        align-self: flex-end
+        padding-left: 70px
+        padding-bottom: 45px
+        margin-right: 140px
+        span
+          display: block
+          text-align: right
+          padding-bottom: 25px
+          color: #172228
+          font-size: em(14px)
+          &:first-child
+            font-family: "GilroyExtraBold", sans-serif
+            font-size: em(18px)
+            font-weight: 700
+      .calculate
+        .runningMeter
+          color: #80a6c4
+          font-size: em(14px)
+          text-align: left
+          padding-bottom: 22px
+        .resMeter
+          +size(135px 50px)
+          position: absolute
+          right: 80px
+          top: 50px
+          background-color: #fff
+          color: #172228
+          border: 3px solid #80a6c4
+          border-radius: 50px
+          font-size: em(18px)
+          line-height: 50px
+          vertical-align: middle
+          span
+            color: #80a6c4
+            font-size: em(18px)
+
+        #slider
+          margin-left: 10px
+          width: 551px
+          +size(551px 6px)
+          background-color: #80a6c4
+          border-radius: 6px
+          border: none
+          .ui-slider-handle
+            width: 15px
+            height: 15px
+            border-radius: 15px
+            border: none
+            background-color: $button-color
+            cursor: pointer
+
+        .ui-slider
+          &:before
+            content: '1'
+            position: absolute
+            top: 13px
+            left: 0px
+            font-size: em(12px)
+            color: #80a6c4
+            padding-top: 10px
+            background: url("../img/line.png") center top no-repeat
+
+        .ui-slider
+          &:after
+            content: '1 000'
+            position: absolute
+            top: 13px
+            right: -13px
+            font-size: em(12px)
+            color: #80a6c4
+            padding-top: 10px
+            background: url("../img/line.png") center top no-repeat
+        .res
+          text-align: left
+          margin-top: 66px
+          .summMaterial
+            color: #80a6c4
+            font-size: em(14px)
+          .summFlex
+            font-family: "GilroyExtraBold", sans-serif
+            font-size: em(18px)
+            font-weight: 700
+          span
+            display: block
+            padding-bottom: 25px
+
+//******** SECTION-7*******
+
+.section-7
+  @extend .section-4
+  background: url(../img/bg-7.png) no-repeat
+  min-height: 0
+  padding-bottom: 70px
+  .wrapp
+    .section-content
+      margin: auto
+
+//********** SECTION-8*************
+
+.section-8
+  @extend .section-3
+  padding-bottom: 0
+
+  .wrapp
+    .catalog-sidebar
+      .catalog-menu
+        min-height: 180px
+        margin-bottom: 30px
+    .catalog-main
+      min-height: 0px
+      padding-bottom: 80px
+      .product-column
+        .product
+          h3
+            color: #646c70
+
+// *******SECTION-9**********
+
+.section-9
+  .wrapp
+    @extend %wrapp
+    .section-head
+      padding-bottom: 45px
+      margin-bottom: 0
+    .section-content
+      .menu-project
+        padding-bottom: 30px
+        ul
+          li
+            display: inline-block
+            margin: 0 3px
+            font-size: em(16px)
+            font-family: "GilroyLight", sans-serif
+            border: 3px solid rgb(117, 152, 180)
+            border-radius: 20px
+            line-height: 34px
+            cursor: pointer
+            &:hover
+              background-color: #4f7da2
+              border: 3px solid #4f7da2
+          .active-link-project
+            background-color: #7598b4
+            color: #fff
+            text-transform: uppercase
+            font-family: "GilroyExtraBold", sans-serif
+            font-weight: 700
+            &:hover
+              background-color: #4f7da2
+              border: 3px solid #4f7da2
+          .pro-1
+            width: 164px
+          .pro-2
+            width: 220px
+          .pro-3, .pro-4
+            width: 84px
+      .block-project
+        overflow: hidden
+
+        .project
+          display: none
+          .photo-project
+            float: left
+            width: 606px
+            margin-right: 40px
+
+            img
+              float: left
+              &:nth-child(1)
+                margin-right: 10px
+              &:nth-child(2)
+                margin: 0 10px 10px 0
+              &:nth-child(3)
+                margin-bottom: 10px
+          .info-project
+            float: left
+            width: 500px
+            text-align: left
+            margin-top: 23px
+            p
+              padding-bottom: 15px
+              text-align: left !important
+              color: #172228
+              font-size: em(24px)
+              line-height: 30px
+              letter-spacing: 0.05em
+            dl
+              color: #7598b4
+              letter-spacing: 0.05em
+              margin-bottom: 40px
+              dt
+                padding-bottom: 10px
+                font-size: em(15px)
+                font-family: "GilroyExtraBold", sans-serif
+                font-weight: 700
+              dd
+                padding-bottom: 20px
+                font-size: em(12px)
+                font-family: "GilroyLight", sans-serif
+            .buttons
+              @extend %buttons
+              margin-left: 0
+              width: 160px
+              line-height: 50px
+              vertical-align: middle
+
+
+        .active
+          display: block
+
+//********SECTION-10*****
+
+.section-10
+  background-size: cover
+  background-position: center
+  min-height: 540px
+  margin-top: 100px
+  .section-head
+    h2, p
+      color: #fff
+  .section-content
+    width: 770px
+    margin: 0 auto
+    padding-top: 84px
+    font-size: em(14px)
+    line-height: 18px
+    p
+      text-align: left
+      padding-bottom: 23px
+      span
+          color: #fff
+    ul
+      padding-bottom: 20px
+      li
+        color: #507a9b
+        line-height: 18px
+        &:before
+          content: "○"
+          color: #fff
+          padding-right: 15px
+
+//********Section-11********
+
+.section-11
+  background-color: #f2f6f9
+  padding-bottom: 75px
+  .wrapp
+    @extend %wrapp
+    .works
+      @extend %flex
+      justify-content: space-between
+      margin-bottom: 30px
+      .work
+        align-content: flex-start
+        min-width: 386px
+        min-height: 316px
+        margin-bottom: 10px
+        padding-bottom: 30px
+        background-color: #fff
+        .img-work
+          width: 100%
+          padding-top: 43px
+        h5
+          padding-top: 18px
+          padding-bottom: 20px
+          font-size: em(18px)
+          font-family: "GilroyLight", sans-serif
+        p
+          padding-bottom: 15px
+          margin: 0
+          font-size: em(14px)
+        ul
+          text-align: left
+          padding-bottom: 23px
+          li
+            list-style-type: circle
+            font-size: em(14px)
+            line-height: 20px
+            color: #507a9b
+    .buttons
+      @extend %buttons
+      margin: 0 auto
+      width: 250px
+      line-height: 50px
+
+
+//*******SECTION-12*******
+
+.section-12
+  min-height: 640px
+  background: url(../img/bg-12.jpg) center no-repeat
+  .wrapp
+    @extend %wrapp
+    .section-head
+      p
+        font-size: em(18px)
+        padding-bottom: 240px
+    .ishell
+      width: 215px
+      height: 98px
+      padding-left: 70px
+      position: relative
+      a
+        outline: none
+
+//*********SECTION-13****
+
+.section-13
+  height: 574px
+  #map
+    width: 100%
+    height: 574px
+  .wrapp
+    @extend %wrapp
+    .block-contacts
+      z-index: 10
+      width: 640px
+      position: absolute
+      top: -500px
+      right: 50%
+      transform: translate(50%,0)
+      h2
+        padding-bottom: 50px
+        font-size: em(48px)
+        font-family: "GilroyExtraBold", sans-serif
+        font-weight: 700
+      .contacts
+        background-color: #fff
+        padding: 30px 0 10px 0
+        span
+          font-size: em(18px)
+          letter-spacing: 0.05em
+          color: #172228
+        p
+          padding: 12px 0 24px 0
+          font-size: em(24px)
+          font-family: "GilroyExtraBold"
+          font-weight: 700
+          line-height: 34px
+          letter-spacing: 0.05em
+          color: #172228
+
+//******* FOOTER********
+
+footer
+  .top
+    height: 36px
+    background-color: #1F2B3A
+    background-image: url(../img/top.png)
+    background-repeat: no-repeat
+    background-position: center
+    cursor: pointer
+  .wrapp
+    @extend %wrapp
+    .section-content
+      @extend %flex
+      justify-content: space-between
+      min-height: 120px
+      .phone, .logo
+        align-self: center
+      .phone
+        @extend %flex
+        justify-content: space-between
+        width: 330px
+        text-align: left
+        span
+          align-self: center
+          padding-right: 30px
+          font-size: em(18px)
+          letter-spacing: 0.05em
+          color: #7598b4
+        .buttons
+          @extend %buttons
+          width: 150px
+          line-height: 40px
+          margin: 0
+      .logo
+        @extend %flex
+        justify-content: space-between
+        width: 160px
+        text-align: right
+        span
+          align-self: center
+          font-size: em(14px)
+          color: #172228
+          letter-spacing: 0.05em
+.hidden
+  display: none
+#callback
+  max-width: 400px
+  padding: 35px 35px 30px
+  margin: auto
+  position: relative
+  background-color: #fff
+
+  h2
+    text-align: center
+    padding-bottom: 34px
+    color: #000
+    font-size: em(38px)
+    font-family: "GilroyExtraBold", sans-serif
+    font-weight: 800
+    text-transform: uppercase
+
+  p
+    text-align: center
+    color: #507a9b
+    padding-bottom: 30px
+  a
+    @extend %buttons
+    display: block
+    margin: 0 auto
+    width: 300px
+    line-height: 50px
+    border-radius: 50px
+    outline: none
+    vertical-align: middle
+
+  input
+    margin: 0 auto
+    display: block
+    margin-bottom: 10px
+    width: 300px
+    height: 50px
+    border: none
+    border-radius: 50px
+    background-color: #f2f6f9
+    outline: none
+    text-align: center
+
+  input[type=submit]
+    margin-top: 15px
+    background-color: $button-color
+    color: #fff
+    border: none
+    cursor: pointer
+  .mfp-close
+    color: #21374f
+
+  .clearable
+    background-image: url(../img/close.png)
+    background-position: 95% 50%
+    background-repeat: no-repeat
+    cursor: pointer
+
+  input::-moz-placeholder
+    color: #172228
+    font-size: 14px
+    text-align: center
+
+  input::-webkit-input-placeholder
+    color: #172228
+    font-size: 14px
+    text-align: center
+  input::-moz-focus-inner
+    border: 0 !important
+
+.mfp-forms
+  .myForm
+    background-color: rgba(36, 51, 67, 1)
+    box-shadow: 0 0 18px rgba(0,0,0,.5), 0 0 0 5px #243343
+    border: none
+    border-radius: 1px
+  &.mfp-wrap
+    &.mfp-ready
+      opacity: 1
+  .mfp-close
+    //color: #fff
+  &.mfp-bg
+    opacity: 0
+    transition: all 0.25s ease-out
+    &.mfp-ready
+      opacity: 0.8
+    &.mfp-removing
+      opacity: 0
+  &.mfp-wrap
+    .mfp-content
+      opacity: 0
+      transition: all 0.25s ease-out
+    &.mfp-ready .mfp-content
+      opacity: 1
+    &.mfp-removing .mfp-content
+      opacity: 0
