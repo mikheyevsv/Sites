@@ -1,0 +1,33 @@
+@import "bourbon";
+@import "_vars";
+@import "_mixin";
+@import "_setings";
+.section-11 {
+  padding-top: 76px;
+  padding-bottom: 96px;
+}
+.tweet {
+  margin: 0 auto;
+  padding-bottom: 57px;
+  background-image: url(../img/s11/s11-tweet.png);
+  background-repeat: no-repeat;
+  @include size(27px 22px);
+}
+
+.section-11 img {
+  padding-bottom: 42px;
+}
+.section-11 p {
+  margin: 0 auto;
+  padding-bottom: 39px;
+  max-width: 830px;
+  color: #222;
+  font-size: rem(20);
+  line-height: 38px;
+}
+.section-11 span {
+  color: #222;
+  font-family: "SourceSansProBold";
+  font-size: rem(16);
+  font-weight: 700;
+}

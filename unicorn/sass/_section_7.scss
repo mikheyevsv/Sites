@@ -1,0 +1,57 @@
+@import "bourbon";
+@import "_vars";
+@import "_mixin";
+@import "_setings";
+.section-7 {
+  padding-bottom: 135px;
+}
+.section-7 .section-content {
+  @extend %flex;
+  max-width: 1015px;
+  justify-content: space-between;
+  align-content: stretch;
+  margin: 0 auto;
+}
+.s7-item {
+  margin: auto 0;
+  min-width: 160px;
+  h3, span {
+    color: #222;
+    font-family: "SourceSansProBold", sans-serif;
+    font-size: rem(18);
+    font-weight: 700;
+    line-height: 34px;
+    text-transform: uppercase;
+  }
+  span {
+    font-family: "SourceSansProRegular", sans-serif;
+    font-size: rem(15);
+    text-transform: none;
+    font-weight: normal;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .section-7 {
+    padding-bottom: 70px;
+  }
+  .section-7 .section-head {
+    p {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .section-7 .section-content {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 339px){
+  .section-7 {
+    padding-bottom: 50px;
+  }
+  .section-7 .section-content {
+    justify-content: center;
+  }
+}

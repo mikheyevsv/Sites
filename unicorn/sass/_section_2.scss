@@ -1,0 +1,39 @@
+@import "bourbon";
+@import "_vars";
+@import "_mixin";
+@import "_setings";
+
+.section-2 {
+  background-color: $s2-bg;
+  padding-bottom: 117px;
+}
+.section-2 .section-content {
+  @extend %flex;
+  justify-content: space-around;
+  padding-top: 78px;
+}
+
+.section-2 .item {
+  width: 269px;
+  text-align: left;
+  h3 {
+    padding: 30px 0;
+    font-family: "SourceSansProSemiBold", sans-serif;
+    font-size: rem(18);
+    font-weight: 600;
+  }
+  p {
+    line-height: 26px;
+  }
+}
+
+@media only screen and (max-width: 827px){
+
+  .section-2 .section-content {
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .section-2 .item {
+    margin-bottom: 50px;
+  }
+}

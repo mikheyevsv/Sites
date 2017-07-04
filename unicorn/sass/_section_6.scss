@@ -1,0 +1,35 @@
+@import "bourbon";
+@import "_vars";
+@import "_mixin";
+@import "_setings";
+
+.section-6 {
+  background-color: $text-color;
+  padding-bottom: 65px;
+}
+.section-6 .section-content {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 125px;
+  max-width: 830px;
+  &::before {
+    position: absolute;
+    top: 85px;
+    content: '';
+    background-image: url(../img/s6/s6-cite.png);
+    @include size(17px)
+  }
+  p, span {
+    color: #eee;
+    font-size: rem(20);
+    font-weight: 400;
+    line-height: 38px;
+  }
+  span {
+    display: block;
+    padding-top: 46px;
+    color: #fff;
+    font-style: italic;
+    line-height: none;
+  }
+}

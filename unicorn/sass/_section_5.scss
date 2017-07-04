@@ -1,0 +1,114 @@
+@import "bourbon";
+@import "_vars";
+@import "_mixin";
+@import "_setings";
+
+.section-5 {
+  margin-bottom: 115px;
+}
+.section-5 .section-head h2 {
+  padding-bottom: 50px;
+}
+.section-5__section-head p {
+  padding-bottom: 0;
+}
+.slider-list {
+  position: relative;
+  margin-bottom: 47px;
+  padding-top: 115px;
+  &::before {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    background-image: url(../img/s3/slider-line.png);
+    background-size: cover;
+    @include size(75px 7px)
+  }
+}
+.slider-list li {
+  display: inline-block;
+}
+
+.slider-list li:not(:nth-child(5n - 5)) {
+  padding-right: 37px;
+}
+.slider-list a {
+  line-height: 33px;
+  @include trans(.2s);
+  &:hover {
+    color: $accent-slider-color;
+  }
+  &:focus {
+    color: $accent-slider-color + 40;
+    text-decoration: underline;
+  }
+}
+.section-5 .slick-next, .section-5 .slick-prev {
+  display: none!important;
+}
+@media only screen and (max-width: 1200px) {
+  margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 980px) {
+  .section-5 .slider-wrapp {
+    max-height: 300px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .section-5 {
+    margin-bottom: 100px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+    .section-5 {
+      padding: 40px 0;
+    }
+
+  .section-5 .section-head {
+    padding-top: 0;
+    h2 {
+      padding-bottom: 20px;
+    }
+  }
+  .section-content {
+    .slider-list {
+      padding-top: 80px;
+      margin-bottom: 30px;
+      &::before {
+        top: 40px;
+      }
+    }
+  }
+  .section-5 .slick-dotted {
+    margin-bottom: 0;
+  }
+  .section-5 .slick-dots {
+    display: block;
+    width: 80%;
+    margin-left: 50px;
+    bottom: -50px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .section-5 .slider-wrapp {
+    max-height: 440px;
+  }
+}
+
+@media only screen and (max-width: 430px){
+  .section-5 .section-head p {
+    line-height: 21px;
+  }
+  .section-5 .slider-list li:not(:nth-child(5n-5)) {
+    padding-right: 10px;
+  }
+  .section-5 .slick-dots {
+    margin-left: 33px;
+    bottom: -70px;
+  }
+}

@@ -1,0 +1,39 @@
+@import "bourbon";
+@import "_vars";
+@import "_mixin";
+@import "_setings";
+
+.section-1 {
+  padding-bottom: 117px;
+}
+
+.section-head {
+  padding-top: 101px;
+  img {
+    padding-bottom: 22px;
+  }
+  h2{
+    padding-bottom: 80px;
+  }
+}
+.section-content p {
+  margin: 0 auto;
+  max-width: 970px;
+
+}
+
+@media only screen and (max-width: 760px) {
+  .section-1 {
+    padding-bottom: 40px;
+  }
+
+  .section-head {
+    padding-top: 60px;
+    img {
+      padding-bottom: 15px;
+    }
+    h2{
+      padding-bottom: 30px;
+    }
+  }
+}

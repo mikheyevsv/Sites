@@ -1,0 +1,53 @@
+@import "bourbon";
+@import "vars";
+@import "mixin";
+%wrapp {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  font-family: "SourceSansProRegular", sans-serif;
+  color: $text-color;
+  z-index: 0;
+  &::after {
+    content: '';
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    display: block;
+    position: relative;
+    font-size: 0px;
+    line-height: 0px;
+  }
+}
+%flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+p {
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: 33px;
+}
+
+h2{
+  font-family: "SourceSansProBold", sans-serif;
+  font-size: rem(27);
+  font-weight: 700;
+}
+button::-moz-focus-inner {
+  border: 0!important;
+}
+input::-moz-focus-inner {
+  border: 0!important;
+}
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+.slider-wrapp {
+  max-height: 369px;
+  overflow: hidden;
+}

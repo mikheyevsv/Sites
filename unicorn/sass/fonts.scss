@@ -1,0 +1,6 @@
+@import "bourbon";
+
+@include font-face("SourceSansProBlack", "fonts/SourceSansProBlack/SourceSansProBlack", $file-formats: eot woff ttf);
+@include font-face("SourceSansProBold", "fonts/SourceSansProBold/SourceSansProBold", $file-formats: eot woff ttf);
+@include font-face("SourceSansProRegular", "fonts/SourceSansProRegular/SourceSansProRegular", $file-formats: eot woff ttf);
+@include font-face("SourceSansProSemiBold", "fonts/SourceSansProSemiBold/SourceSansProSemiBold", $file-formats: eot woff ttf);

@@ -1,0 +1,76 @@
+@import "bourbon";
+@import "_vars";
+@import "_mixin";
+@import "_setings";
+
+.section-9 {
+  padding-top: 115px;
+  padding-bottom: 100px;
+}
+.s9-item {
+  @extend %flex;
+  justify-content: space-between;
+  margin-top: 45px;
+  &:first-child{
+    margin-top: 0;
+  }
+}
+.block-content {
+  align-self: center;
+  flex-basis: 431px;
+  span {
+    line-height: none;
+  }
+  .date {
+    display: block;
+    padding-bottom: 19px;
+    color: #555;
+    font-size: rem(14);
+  }
+  .head {
+    padding-bottom: 54px;
+    color: #222;
+    font-family: "SourceSansProSemiBold", sans-serif;
+    font-size: rem(24);
+    font-weight: 600;
+  }
+  .content {
+    color: #333;
+    font-size: rem(16);
+  }
+}
+.s9-item  {
+  .right {
+    order: 2;
+  }
+  .left {
+    order: 1;
+  }
+}
+
+@media only screen and (max-width: 1021px){
+  .s9-item {
+    justify-content: center;
+    .content {
+      padding-bottom: 20px;
+    }
+  }
+  .s9-item  {
+    .right {
+      order: 0;
+    }
+    .left {
+      order: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .section-9 {
+    padding-top: 65px;
+    padding-bottom: 75px;
+  }
+  .block-content .head {
+    padding-bottom: 27px;
+  }
+}
