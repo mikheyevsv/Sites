@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+
+
+
+	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+	<!-- Load CSS Start -->
+	<script>loadLocalStorageCSS( "webfonts", "css/fonts.css?ver=1.0.0" );</script>
+	<script>loadCSS( "css/reset.css?ver=1.0.0", false, "all" );</script>
+	<script>loadCSS( "css/header.css?ver=1.0.0", false, "all" );</script>
+	<script>loadCSS( "css/main.css?ver=1.0.0", false, "all" );</script>
+	<!-- Load CSS End -->
+
+	<!-- Load CSS Compiled without JS -->
+	<noscript>
+		<link rel="stylesheet" href="css/fonts.css">
+		<link rel="stylesheet" href="css/main.css">
+	</noscript>
+
+</head>
+
+<body>
+<header>
+	<div class="topline">
+		<div class="wrapp">
+			<a href="#" class="toggle-mnu">
+				<span></span>
+			</a>
+				<a href="" class="logo"><img src="img/logo.svg" alt="Armata Financical Group"></a>
+
+			<nav>
+				<ul class="hidden-menu">
+					<li><a href="#" class="doc"></a></li>
+					<li><a href="#" class="info"></a></li>
+				</ul>
+				<ul class="menu">
+					<li><a href="#" class="doc">Инструкция для кассиров</a></li>
+					<li><a href="#" class="info">Техподдержка</a></li>
+					<li><a href="#" class="lc">Войти в личный кабинет</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+<section class="section-1" style="background-image: url(img/section-1/bg-1.png);">
+	<div class="wrapp">
+        <div class="container">
+            <div class="phone">
+				<picture>
+					<source media="(max-width: 20em)" srcset="img/section-1/phone-320.png">
+					<source media="(max-width: 30em)" srcset="img/section-1/phone-320.png">
+                <img
+					src="img/section-1/phone.png" alt="phone">
+				</picture>
+            </div>
+            <div class="content">
+                <p class="innovation">ИННОВАЦИОННАЯ ПЛАТЕЖНАЯ <br> СИСТЕМА В РОССИИ TETRAPAY</p>
+                <h1>УВЕЛИЧЬТЕ ЧИСЛО КЛИЕНТОВ<br>
+                    ВАШЕГО БАНКА<br>
+                    <span>МИНИМУМ НА 15%</span></h1>
+
+            </div>
+            <div class="button-wrapp">
+                <a href="#callback" class="button">Скачать предложение для организаций в PDF</a>
+                <p class="period">БЕСПЛАТНОЕ ОБСЛУЖИВАНИЕ 1 ГОД</p>
+            </div>
+        </div>
+	</div>
+</section>
+
+<section class=" homesect section-2">
+	<div class="left-human"></div>
+	<div class="right-human"></div>
+	<div class="wrapp">
+		<div class="section-head">
+			<h2>
+				Кратко о системе TETRAPAY
+			</h2>
+			<p>
+				Платежная платформа TETRA дает возможность банкам и торговым учреждениям<br>рассчитывать клиента с помощью специального приложения на iOS/Android,<br>без банковского терминала
+			</p>
+		</div>
+		<div class="section-content">
+            <!--<div class="content-immage">-->
+                <!--<img src="img/section-2/bg-2.jpg" alt="circle">-->
+            <!--</div>-->
+			<div class="content-top">
+				<div class="item">
+					<img src="img/section-2/card.png" alt="">
+					<h4>Банк</h4>
+					<p>Регистрируется в системе TETRA. Открываете клиенту счет.Счет привязывается к приложению.</p>
+				</div>
+				<div class="item">
+					<img src="img/section-2/case.png" alt="">
+					<h4>Торговое предприятие</h4>
+					<p>Регистрируется в системе TETRA.Производит расчет с помощью специального приложения кассира.</p>
+				</div>
+			</div>
+			<div class="content-bottom">
+
+				<div class="item">
+					<img src="img/section-2/human.png" alt="">
+					<h4>Клиент банка</h4>
+					<p>Скачивает приложение на телефон и оплачивает товар с телефона, без банковского терминала.</p>
+				</div>
+				<div class="item">
+					<img src="img/section-2/cashe.png" alt="">
+					<h4>Кассир</h4>
+					<p>Скачивает приложение на телефон/компьютер и принимает оплату без банковского терминала.</p>
+				</div>
+			</div>
+			<div class="button-wrapp">
+				<a href="#callback" class="button">Получить консультацию</a>
+			</div>
+		</div>
+	</div>
+
+</section>
+<section class="hidden-block homesect">
+
+		<div class="wrapp">
+			<div class="section-head">
+				<h2>
+					Как работает TETRAPAY?
+				</h2>
+				<p>
+					Платежная платформа TETRA
+					позволяет оплатить товары или услуги
+					с помощью мобильного приложения
+					на iOS/Android всего в 1 нажатие
+					Банковский терминал при оплате
+					не нужен!
+				</p>
+			</div>
+			<div class="section-content">
+				<div class="item">
+					<img src="img/section-2/card.png" alt="card">
+					<p>Банк</p>
+                    <div class="arrow"></div>
+                    <div class="inf">
+                        <p>Регистрируется в системе TETRA.Производит расчет с помощью специального приложения кассира.</p>
+                    </div>
+				</div>
+
+				<div class="item">
+					<img src="img/section-2/human.png" alt="human">
+					<p>Клиент банка</p>
+                    <div class="arrow"></div>
+                    <div class="inf">
+                        <p>Регистрируется в системе TETRA.Производит расчет с помощью специального приложения кассира.</p>
+                    </div>
+				</div>
+
+				<div class="button-wrapp">
+					<a href="#callback" class="button">Получить консультацию</a>
+				</div>
+				<div class="item second">
+					<img src="img/section-2/case.png" alt="case">
+					<p>Торговое предприятие</p>
+                    <div class="arrow"></div>
+                    <div class="inf">
+                        <p>Регистрируется в системе TETRA.Производит расчет с помощью специального приложения кассира.</p>
+                    </div>
+				</div>
+
+				<div class="item last">
+					<img src="img/section-2/cashe.png" alt="cash">
+					<p>Кассир</p>
+                    <div class="arrow"></div>
+                    <div class="inf">
+                        <p>Регистрируется в системе TETRA.Производит расчет с помощью специального приложения кассира.</p>
+                    </div>
+				</div>
+			</div>
+		</div>
+</section>
+<section class="section-3 homesect">
+	<div class="wrapp">
+		<div class="section-head">
+			<h2>4 шага &mdash; и вы участник системы!</h2>
+		</div>
+		<div class="section-content">
+			<div class="items">
+				<div class="item">
+					<div class="circle">
+						<img src="img/section-3/item1.png" alt="">
+					</div>
+					<p>Подключитесь
+						к системе TETRA</p>
+				</div>
+				<div class="item">
+					<div class="circle">
+						<img src="img/section-3/item-2.png" alt="">
+					</div>
+
+					<p>Подключите своих клиентов к системе</p>
+				</div>
+				<div class="item">
+					<div class="circle">
+						<img src="img/section-3/item-3.png" alt="">
+					</div>
+					<p>Получайте комиссию
+						за проведение платежей</p>
+				</div>
+				<div class="item last">
+					<div class="circle">
+						<img src="img/section-3/item-4.png" alt="">
+					</div>
+					<p>Привлекайте новых
+						пользователей</p>
+				</div>
+			</div>
+		</div>
+		<div class="section-bottom">
+			<p>Посмотрите подробное видео ИЛИ скачайте инструкцию,
+				чтобы узнать, как начать пользоваться TETRAPAY!</p>
+			<div class="button-wrapp">
+				<a href="javascript:void(0);" class="button">Смотреть видео</a>
+			</div>
+			<a href="1.docx" title="Инструкция" download>Скачать инструкцию</a>
+		</div>
+	</div>
+</section>
+<section class="section-4 homesect">
+	<div class="wrapp">
+		<div class="section-head">
+			<h2> Понятный интерфейс<br>
+				+ полезные инструменты</h2>
+		</div>
+		<div class="section-content">
+			<div class="left-side">
+				<div class="advantages">
+					<h3>Простое меню</h3>
+				</div>
+				<div class="advantages">
+					<h3 id="rotate">Личный кабинет</h3>
+					<p>Вы подключаете своих клиентов
+						к системе TETRA</p>
+					<p>Вы можете заблокировать канал оплаты для торгового предприятия или функцию оплаты для отдельных клиентов</p>
+					<p>Вы выставляете счета платежным организациям за процессинг и др. услуги, контролируете их проведение</p>
+				</div>
+
+			</div>
+			<div class="right-side">
+				<div class="advantages">
+					<h3>Аналитика</h3>
+					<p>Интеграция с "1С" позволяет готовить платежное требование на объем проведенных в системе платежей, вести учет в системе всех совершенных банковских операций и т. д.</p>
+				</div>
+				<div class="advantages">
+					<h3>Рекламный блок</h3>
+					<p>Вы загружаете и отсылаете информацию о своих промоакциях, новых услугах, изменениях в правилах оказания услуг и т. д.</p>
+				</div>
+
+			</div>
+			<div class="image-wrapp">
+				<img src="img/section-4/s4-phone.jpg" alt="">
+			</div>
+		</div>
+		<div class="s-bottom">
+				<div class="advantages left">
+					<h3>+ Специальный<br> офис для кассира</h3>
+					<p>Для расчета с клиентом, скачивается отдельно</p>
+				</div>
+				<span>Разберетесь<br> за 5 минут!</span>
+				<div class="advantages right">
+					<h3>+ Еще более 20 полезных инструментов</h3>
+					<p>Делают работу максимально комфортной</p>
+				</div>
+		</div>
+	</div>
+</section>
+<section class="section-5">
+	<div class="wrapp">
+		<h4>
+			Хотите попробовать новую систему в работе и оценить ее возможности?<br>Прямо сейчас вы можете оставить заявку на регистрацию в TETRAPAY!
+		</h4>
+		<form action="">
+			<input type="text" placeholder="Имя:">
+			<input type="text" placeholder="Телефон:">
+			<a href="#callback" class="button">Отправить заявку</a>
+		</form>
+		<p>Или свяжитесь с нами по телефону +7 (495) 111-22-33</p>
+	</div>
+</section>
+<section class="section-6 homesect">
+	<div class="wrapp">
+		<div class="section-head">
+			<h2>Вот что говорят банки,<br>работающие в TETRAPAY...</h2>
+		</div>
+		<div class="slider">
+			<div class="slide">
+				<div class="image-wrapp">
+					<img src="img/section-6/slider-image.jpg" alt="">
+				</div>
+				<div class="text">
+					<p>Прирост лояльных пользователей на 5%!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, hendrerit. Vivamus varius pretium ligula</p>
+				</div>
+				<span> Антон Дмитриевич, ООО "ВТБ" г. Москва  </span>
+			</div>
+			<div class="slide">
+				<div class="image-wrapp">
+					<img src="img/section-6/slider-image.jpg" alt="">
+				</div>
+				<div class="text">
+					<p>Прирост лояльных пользователей на 5%!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, hendrerit. Vivamus varius pretium ligula</p>
+				</div>
+				<span> Антон Дмитриевич, ООО "ВТБ" г. Москва  </span>
+			</div>
+			<div class="slide">
+				<div class="image-wrapp">
+					<img src="img/section-6/slider-image.jpg" alt="">
+				</div>
+				<div class="text">
+					<p>Прирост лояльных пользователей на 5%!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, hendrerit. Vivamus varius pretium ligula</p>
+				</div>
+				<span> Антон Дмитриевич, ООО "ВТБ" г. Москва  </span>
+			</div>
+			<div class="slide">
+				<div class="image-wrapp">
+					<img src="img/section-6/slider-image.jpg" alt="">
+				</div>
+				<div class="text">
+					<p>Прирост лояльных пользователей на 5%!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, hendrerit. Vivamus varius pretium ligula</p>
+				</div>
+				<span> Антон Дмитриевич, ООО "ВТБ" г. Москва  </span>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="section-7 homesect">
+    <div class="wrapp">
+        <div class="section-head">
+            <h2>6 причин зарегистрировать<br>банк в TETRAPAY</h2>
+			<span>5 причин</span>
+			<p>подключиться к TETRAPAY<br>прямо сейчас</p>
+        </div>
+        <div class="section-content">
+			<div class="content-immage">
+				<img src="img/section-7/s7-bg.png" alt="mobile">
+			</div>
+            <div class="causes">
+                <div class="cause">
+                    <h4>Эффективно</h4>
+                    <p>Вы можете расширить свою клиентскую базу на 10-15%</p>
+                </div>
+                <div class="cause">
+                    <h4>Выгодно</h4>
+                    <p>Вы увеличиваете платежный оборот, запускаете новый способ платежей, дающий дополнительный комиссионный доход  </p>
+                </div>
+                <div class="cause">
+                    <h4>Экономно</h4>
+                    <p>Вы экономите на процессинге
+                        и производстве карт, снижаете затраты по сертификации
+                        и страховым депозитам  </p>
+                </div>
+                <div class="cause">
+                    <h4>Надежно</h4>
+                    <p>Все платежи и вся информация
+                        о ваших клиентах и их операциях надежно защищены</p>
+                </div>
+                <div class="cause">
+                    <h4>Современно</h4>
+                    <p>Вы предлагаете клиентам современный способ оплаты
+                        и приема платежей, который упрощает все процессы</p>
+                </div>
+                <div class="cause">
+                    <h4>Проверено</h4>
+                    <p>В США и Европе есть аналогичные системы Direct Invoicing и др., которые отлично себя зарекомендовали </p>
+                </div>
+            </div>
+            <div class="button-wrapp">
+                <a href="#callback" class="button">Стать участником системы</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-8 homesect">
+	<div class="wrapp">
+		<div class="section-head">
+			<h2>У нас часто спрашивают...</h2>
+		</div>
+		<div class="accordion">
+			<div class="accordianheader">
+				<h3>1. Как стать участником системы?<i class="fa fa-angle-down fa-2x"></i>
+				</h3>
+				<p>Мы гарантируем строгую конфиденциальность. Дело в том, что при входе в систему клиент проходит процедуру авторизации с помощью специального кода. Вся информация о покупках хранится в его личном кабинете, доступ в который получает только авторизованное лицо, то есть сам клиент. А значит, и вы, как банк, можете спокойно гарантировать надежность системы и конфиденциальность информации своим клиентам</p>
+			</div>
+			<div class="accordianheader">
+				<h3>2. Как стать участником системы? <i class="fa fa-angle-down fa-2x"></i>
+				</h3>
+				<p>Мы гарантируем строгую конфиденциальность. Дело в том, что при входе в систему клиент проходит процедуру авторизации с помощью специального кода. Вся информация о покупках хранится в его личном кабинете, доступ в который получает только авторизованное лицо, то есть сам клиент. А значит, и вы, как банк, можете спокойно гарантировать надежность системы и конфиденциальность информации своим клиентам</p>
+			</div>
+			<div class="accordianheader">
+				<h3>3. Надежна ли система в плане сохранения конфиденциальности? <i class="fa fa-angle-down fa-2x"></i>
+				</h3>
+				<p>Мы гарантируем строгую конфиденциальность. Дело в том, что при входе в систему клиент проходит процедуру авторизации с помощью специального кода. Вся информация о покупках хранится в его личном кабинете, доступ в который получает только авторизованное лицо, то есть сам клиент. А значит, и вы, как банк, можете спокойно гарантировать надежность системы и конфиденциальность информации своим клиентам</p>
+			</div>
+			<div class="accordianheader">
+				<h3>4. Как принимается оплата за услуги/покупки? <i class="fa fa-angle-down fa-2x"></i>
+				</h3>
+				<p>Мы гарантируем строгую конфиденциальность. Дело в том, что при входе в систему клиент проходит процедуру авторизации с помощью специального кода. Вся информация о покупках хранится в его личном кабинете, доступ в который получает только авторизованное лицо, то есть сам клиент. А значит, и вы, как банк, можете спокойно гарантировать надежность системы и конфиденциальность информации своим клиентам</p>
+			</div>
+			<div class="accordianheader">
+				<h3>5. Есть ли аналогичные системы в других странах? <i class="fa fa-angle-down fa-2x"></i>
+				</h3>
+				<p>Мы гарантируем строгую конфиденциальность. Дело в том, что при входе в систему клиент проходит процедуру авторизации с помощью специального кода. Вся информация о покупках хранится в его личном кабинете, доступ в который получает только авторизованное лицо, то есть сам клиент. А значит, и вы, как банк, можете спокойно гарантировать надежность системы и конфиденциальность информации своим клиентам</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="section-9 homesect">
+	<div class="wrapp">
+		<div class="section-head">
+			<h2>Используйте возможности TETRAPAY,<br> чтобы привлечь в банк больше клиентов
+			</h2>
+			<p>Чтобы начать работать в TETRAPAY, вам нужно зарегистрироваться.<br>
+				Отправьте заявку на регистрацию!
+			</p>
+		</div>
+		<form action="">
+			<input type="text" placeholder="Имя:">
+			<input type="text" placeholder="Телефон:">
+			<a href="#callback" class="button">Отправить заявку</a>
+		</form>
+		<div class="download-block">
+			<p>Скачать специальное приложение TETRAPAY<br> для кассира вы можете прямо сейчас:</p>
+			<a href="https://www.apple.com/ru/"><img src="img/section-9/apple.jpg" alt="apple"></a>
+			<a href="https://play.google.com/store"><img src="img/section-9/google.jpg" alt="google"></a>
+		</div>
+	</div>
+</section>
+<footer>
+	<div class="wrapp">
+		<form class="myForm" action="">
+			<h2>Остались вопросы?</h2>
+			<p>Заполните форму ниже<br> и отправьте заявку.</p>
+			<p>Наш консультант свяжется<br> с вами в течение часа и ответит<br> на все ваши вопросы.</p>
+			<label for="name">
+				<span>Имя:</span>
+				<input type="text" name="name" id="name" required placeholder="Иванов Иван">
+			</label>
+			<label for="tel">
+				<span>Телефон:</span>
+				<input type="tel" name="phone" id="tel" required placeholder="+7 000 000 00 00">
+			</label>
+			<input type="submit" value="Отправить заявку">
+			<input type="hidden"name="formname" value="">
+		</form>
+		<nav>
+			<ul>
+				<li><a href="javascript:void(0);">Главная</a></li>
+				<li><a href="javascript:void(0);">Торговым предприятиям</a></li>
+				<li><a href="javascript:void(0);">Интернет-магазинам</a></li>
+				<li><a href="javascript:void(0);">Банкам</a></li>
+				<li><a href="javascript:void(0);">Кассирам</a></li>
+				<li><a href="javascript:void(0);">Рекламодателям</a></li>
+				<li class="contacts"><a href="javascript:void(0);">Контакты</a></li>
+				<li><a class="doc" href="javascript:void(0);">Иструкция для кассиров</a></li>
+				<li><a class="info" href="javascript:void(0);">Техподдержка</a></li>
+				<li><a class="lc" href="javascript:void(0);">Войти в личный кабинет</a></li>
+			</ul>
+		</nav>
+		<div class="pay-system">
+			<p>ПЛАТЕЖНАЯ СИСТЕМА<br> TETRAPAY</p>
+			<div class="platforms">
+				<a href="https://www.apple.com/ru/"><img src="img/section-9/apple.jpg" alt="apple"></a>
+				<a href="https://play.google.com/store"><img src="img/section-9/google.jpg" alt="google"></a>
+			</div>
+			<div class="social">
+				<a href="https://www.facebook.com/"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+				<a href="https://www.tumblr.com/"><i class="fa fa-tumblr-square fa-2x" aria-hidden="true"></i></a>
+				<a href="https://linkedin.com/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+				<a href="https://vk.com/"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a>
+				<a href="https://ok.ru/"><i class="fa fa-odnoklassniki-square fa-2x" aria-hidden="true"></i></a>
+				<span>Политика конфиденциальности</span>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="hidden">
+	<form class="myForm" id="callback" action="">
+		<h2>Остались вопросы?</h2>
+		<p>Заполните форму ниже<br> и отправьте заявку.</p>
+		<p>Наш консультант свяжется<br> с вами в течение часа и ответит<br> на все ваши вопросы.</p>
+		<label for="name">
+			<span>Имя:</span>
+			<input type="text" name="name" required placeholder="Иванов Иван">
+		</label>
+		<label for="tel">
+			<span>Телефон:</span>
+			<input type="tel" name="phone" required placeholder="+7 000 000 00 00">
+		</label>
+		<input type="submit" value="Отправить заявку">
+		<input type="hidden"name="formname" value="">
+	</form>
+</div>
+	<script>
+		//Load Libs CSS
+		var ms=document.createElement("link");ms.rel="stylesheet";	ms.href="libs/animate/animate.css";document.getElementsByTagName("head")[0].appendChild(ms);
+
+		Header Styles (compress & paste to header after release)
+		var ms=document.createElement("link");ms.rel="stylesheet";
+			ms.href="_hreset.css";document.getElementsByTagName("head")[0].appendChild(ms);
+
+		  var ms=document.createElement("link");ms.rel="stylesheet";
+		 ms.href="_header.css";document.getElementsByTagName("head")[0].appendChild(ms);
+
+		//User Styles + Media Queries
+		var ms=document.createElement("link");ms.rel="stylesheet";
+		ms.href="_main.css";document.getElementsByTagName("head")[0].appendChild(ms);
+
+	</script>
+
+	<!-- Load Scripts -->
+	<script>var scr = {"scripts":[
+		{"src" : "libs/modernizr/modernizr.js", "async" : false},
+		{"src" : "libs/jquery/dist/jquery.min.js", "async" : false},
+		{"src" : "libs/waypoints/waypoints.min.js", "async" : false},
+		{"src" : "libs/animate/animate-css.js", "async" : false},
+//		{"src" : "libs/plugins-scroll/plugins-scroll.js", "async" : false},
+//		{"src" : "libs/equalHeight/jquery.equalheights.min.js", "async" : false},
+		{"src" : "libs/drawsvg/drawfillsvg.min.js", "async" : false},
+		{"src" : "libs/Magnific-Popup/dist/jquery.magnific-popup.min.js", "async" : false},
+        {"src" : "libs/Rotate/rotate.min.js", "async" : false},
+		{"src" : "libs/jquery-ui/jquery-ui.min.js", "async" : false},
+		{"src" : "libs/slick/slick/slick.min.js", "async" : false},
+		{"src" : "js/common.js", "async" : false}
+	]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+	</script>
+
+</body>
+</html>
